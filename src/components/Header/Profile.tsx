@@ -7,14 +7,23 @@ interface ProfileProps {
 export function Profile({ showProfileData = true }: ProfileProps) {
     return (
         <Flex alignItems="center">
-            {showProfileData && <Box marginRight="4" textAlign="right">
-                <Text>Josimar Junior</Text>
-                <Box>
-                    <Text as="span" color="gray.400" fontSize="small">Desenvolvimento </Text>
-                    <Text as="span" color="gray.200" fontSize="small">&nbsp;|&nbsp;</Text>
-                    <Text as="span" color="gray.400" fontSize="small">Lider</Text>
-                </Box>
-            </Box>}
+            {showProfileData &&
+                <Box
+                    marginRight="4"
+                    textAlign="right"
+                    transition="filter 0.2s"
+                    _hover={{
+                        filter: 'brightness(0.8)',
+                        cursor: 'default'
+                    }}
+                >
+                    <Text>Josimar Junior</Text>
+                    <Box>
+                        <Text as="span" color="gray.400" fontSize="small">Desenvolvimento </Text>
+                        <Text as="span" color="gray.200" fontSize="small">&nbsp;|&nbsp;</Text>
+                        <Text as="span" color="gray.400" fontSize="small">Lider</Text>
+                    </Box>
+                </Box>}
 
             <Avatar
                 size="md"
